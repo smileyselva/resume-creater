@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Smart ATS Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <div id="authSection">
+        <h2>Login / Signup</h2>
+        <input type="email" id="email" placeholder="Email">
+        <input type="password" id="password" placeholder="Password">
+        <button onclick="signup()">Signup</button>
+        <button onclick="login()">Login</button>
+    </div>
+
+    <div id="resumeSection" style="display:none;">
+        <h2>Resume Details</h2>
+
+        <input type="text" id="rname" placeholder="Full Name">
+        <input type="text" id="rphone" placeholder="Phone">
+        <input type="email" id="remail" placeholder="Email">
+        <input type="text" id="linkedin" placeholder="LinkedIn URL">
+        <input type="text" id="github" placeholder="GitHub URL">
+        <input type="text" id="address" placeholder="City, State">
+        <textarea id="objective" placeholder="Professional Summary"></textarea>
+
+        <h3>Education</h3>
+        <input type="text" id="degree" placeholder="Degree">
+        <input type="text" id="college" placeholder="College Name">
+        <input type="text" id="gradYear" placeholder="Graduation Year">
+        <input type="text" id="cgpa" placeholder="CGPA / Percentage">
+
+        <h3>Technical Skills (Comma separated)</h3>
+        <input type="text" id="programming" placeholder="Programming Languages">
+        <input type="text" id="web" placeholder="Web Technologies">
+        <input type="text" id="database" placeholder="Database">
+        <input type="text" id="tools" placeholder="Tools">
+
+        <h3>Projects (Optional)</h3>
+        <div id="projects"></div>
+        <button onclick="addProject()">Add Project</button>
+
+        <br><br>
+        <button onclick="generateResume()">Generate Resume</button>
+        <button onclick="downloadPDF()">Download PDF</button>
+
+        <h2>Resume Preview</h2>
+        <div id="preview" class="resume"></div>
+    </div>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
